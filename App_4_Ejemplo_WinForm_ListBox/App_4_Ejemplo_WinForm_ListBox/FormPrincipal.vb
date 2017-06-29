@@ -167,7 +167,7 @@
 
     End Sub
 
-    Private Sub TextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.txtTextoA.KeyPress 
+    Private Sub TextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
 
         If Not (Char.IsDigit(e.KeyChar) Or Char.IsControl(e.KeyChar)) Then
             'Ignorar la tecla
@@ -175,13 +175,9 @@
 
         End If
         ' Char.ToUpper / String.ToUpper
-    ' Ejercicio: Convertir a mayusculas los caracteres de txtTextoB usando KeyPress
-
-    Private Sub TextBoxB_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.txtTextoA.KeyPress 
-        If Char.IsLetter(e.KeyChar) Then
-            e.KeyChar.ToUpper(e.KeyChar)
-
-        End If
+        ' Ejercicio: Convertir a mayusculas los caracteres de txtTextoB usando KeyPress
     End Sub
+
+
 
 End Class
