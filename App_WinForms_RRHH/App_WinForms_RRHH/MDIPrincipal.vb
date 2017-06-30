@@ -1,4 +1,5 @@
 ﻿Imports System.Windows.Forms
+Imports App_WinForms_RRHH.Modelo
 
 Public Class MDIPrincipal
 
@@ -117,6 +118,12 @@ Public Class MDIPrincipal
 
 
     Private Sub ListarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListarToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub MDI_Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        EmpleadosCRUD.Restaurar()
 
     End Sub
 
