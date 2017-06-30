@@ -2,6 +2,35 @@
 
 Public Class MDIPrincipal
 
+    Private frmAlta As Form_Alta
+    Private frmBaja As Form_Baja
+
+    Private Sub Abrir_Formulario(Of TForm As {Form, New})(ByRef formulario As TForm)
+        If formulario Is Nothing OrElse formulario.IsDisposed() Then
+            formulario = New TForm()
+            formulario.MdiParent = Me
+            formulario.Show()
+        Else
+
+            formulario.Show()
+            ActivateMdiChild(formulario)
+        End If
+    End Sub
+    Private Sub AltaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AltaToolStripMenuItem.Click
+
+        Abrir_Formulario(Of Form_Alta)(frmAlta)
+
+    End Sub
+
+
+    Private Sub BajaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BajaToolStripMenuItem.Click
+
+        Abrir_Formulario(Of Form_Baja)(frmBaja)
+
+    End Sub
+
+    '**** CODIGO AUTOGENERADO POR VISUAL ESTUDIO
+
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripButton.Click, NewWindowToolStripMenuItem.Click
         ' Cree una nueva instancia del formulario secundario.
         Dim ChildForm As New System.Windows.Forms.Form
@@ -85,11 +114,11 @@ Public Class MDIPrincipal
 
     Private m_ChildFormNumber As Integer
 
-    Private Sub AltaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AltaToolStripMenuItem.Click
-        Dim frmAlta As Alta_de_empleado = New Alta_de_empleado()
 
-        frmAlta.MdiParent = Me
-        frmAlta.Show()
+
+    Private Sub ListarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListarToolStripMenuItem.Click
 
     End Sub
+
+
 End Class
