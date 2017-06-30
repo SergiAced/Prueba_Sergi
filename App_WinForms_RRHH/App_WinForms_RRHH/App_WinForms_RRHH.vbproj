@@ -72,10 +72,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alta de empleado.Designer.vb">
-      <DependentUpon>Alta de empleado.vb</DependentUpon>
+    <Compile Include="Form_Baja.Designer.vb">
+      <DependentUpon>Form_Baja.vb</DependentUpon>
     </Compile>
-    <Compile Include="Alta de empleado.vb">
+    <Compile Include="Form_Baja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Alta.Designer.vb">
+      <DependentUpon>Form_Alta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Alta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MDIPrincipal.Designer.vb">
