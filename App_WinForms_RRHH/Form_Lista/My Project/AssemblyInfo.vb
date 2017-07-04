@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Revisar los valores de los atributos del ensamblado
 
-<Assembly: AssemblyTitle("App_WinForms_RRHH")>
+<Assembly: AssemblyTitle("Form_Lista")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("App_WinForms_RRHH")>
+<Assembly: AssemblyProduct("Form_Lista")>
 <Assembly: AssemblyCopyright("Copyright ©  2017")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-<Assembly: Guid("c10c845f-c4c1-4184-9a2f-0bd81aff3a19")>
+<Assembly: Guid("91464834-68c7-4481-944f-51bcd17d99be")>
 
 ' La información de versión de un ensamblado consta de los cuatro valores siguientes:
 '

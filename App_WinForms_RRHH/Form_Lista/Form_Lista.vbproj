@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA0751E1-9037-4D87-80DB-1438864360D2}</ProjectGuid>
+    <ProjectGuid>{BD86F7F2-745B-4428-A5D4-78266D3C598A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>App_WinForms_RRHH.My.MyApplication</StartupObject>
-    <RootNamespace>App_WinForms_RRHH</RootNamespace>
-    <AssemblyName>App_WinForms_RRHH</AssemblyName>
+    <StartupObject>Form_Lista.My.MyApplication</StartupObject>
+    <RootNamespace>Form_Lista</RootNamespace>
+    <AssemblyName>Form_Lista</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>App_WinForms_RRHH.xml</DocumentationFile>
+    <DocumentationFile>Form_Lista.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +31,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>App_WinForms_RRHH.xml</DocumentationFile>
+    <DocumentationFile>Form_Lista.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -72,35 +72,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formularios\Form_Alta.Designer.vb">
-      <DependentUpon>Form_Alta.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Form_Alta.vb">
+    <Compile Include="Form_lista.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Form_Baja.Designer.vb">
-      <DependentUpon>Form_Baja.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Form_Baja.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Form_lista.Designer.vb">
+    <Compile Include="Form_lista.Designer.vb">
       <DependentUpon>Form_lista.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Form_lista.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MDI_Principal.Designer.vb">
-      <DependentUpon>MDI_Principal.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MDI_Principal.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modelo\Constantes.vb" />
-    <Compile Include="Modelo\Empleados\Empleado.vb" />
-    <Compile Include="Modelo\Empleados\EmpleadosCRUD.vb" />
-    <Compile Include="Modelo\Empleados\EmpleadosFichero.vb" />
-    <Compile Include="Modelo\Enumerados.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -118,17 +96,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Formularios\Form_Alta.resx">
-      <DependentUpon>Form_Alta.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Form_baja.resx">
-      <DependentUpon>Form_Baja.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Form_lista.resx">
+    <EmbeddedResource Include="Form_lista.resx">
       <DependentUpon>Form_lista.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDI_Principal.resx">
-      <DependentUpon>MDI_Principal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -149,7 +118,6 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
