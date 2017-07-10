@@ -12,7 +12,9 @@
 
             For i = 0 To arrayEmpleados.Length - 1 Step 1
                 fichero.WriteLine(arrayEmpleados(i).nombre & "," &
-                                  arrayEmpleados(i).apellidos & "," & arrayEmpleados(i).genero & "," & arrayEmpleados(i).categoria)
+                                  arrayEmpleados(i).apellidos & "," &
+                                  arrayEmpleados(i).genero & "," &
+                                  arrayEmpleados(i).categoria)
             Next
             fichero.Close()
             Return True
@@ -32,7 +34,7 @@
                     textoFichero = My.Computer.FileSystem.ReadAllText(nombreFichero)
 
                     '   asignar a arrayRegistros el textoFichero separado con Split
-                    arrayRegistros = textoFichero.Split(vbCrLf)
+                    arrayRegistros = textoFichero.Split(vbCrLf.ToCharArray()(0))
                     ' Bucle Para numeroRegistro desde 0 hasta ultimo elemento de arrayRegistros
                     For i = 0 To arrayRegistros.Length - 1
                         arrayRegistros(i) = arrayRegistros(i).Replace(vbLf, "")
@@ -49,7 +51,7 @@
                     Next
                 Else
                     MessageBox.Show("No se encuentra el fichero.")
-                    Console.WriteLine("No se encuentra el fichero. Ponga un fichero en  C:\Users\sinensia100\" & nombreFichero)
+                    Console.WriteLine("No se encuentra el fichero. Ponga un fichero en  C:\Users\sinensia105\" & nombreFichero)
                 End If
             Catch ex As IndexOutOfRangeException
                 Console.WriteLine("Hay mas elementos de los permitidos")
@@ -57,7 +59,7 @@
                 Console.WriteLine(ex.StackTrace)
 
             Catch ex As System.IO.FileNotFoundException
-                Console.WriteLine("No se encuentra el fichero. Ponga un fichero en  C:\Users\sinensia100\" & nombreFichero)
+                Console.WriteLine("No se encuentra el fichero. Ponga un fichero en  C:\Users\sinensia105\" & nombreFichero)
             Catch ex As Exception
                 Console.WriteLine("Excepción de cualquier tipo")
             End Try

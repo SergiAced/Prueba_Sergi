@@ -22,7 +22,9 @@
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>App_WinForms_RRHH.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,7 +34,9 @@
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>App_WinForms_RRHH.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -41,7 +45,7 @@
     <OptionCompare>Binary</OptionCompare>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionStrict>Off</OptionStrict>
+    <OptionStrict>On</OptionStrict>
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
@@ -84,10 +88,16 @@
     <Compile Include="Formularios\Form_Baja.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Form_lista.Designer.vb">
-      <DependentUpon>Form_lista.vb</DependentUpon>
+    <Compile Include="Formularios\Form_Lista.Designer.vb">
+      <DependentUpon>Form_Lista.vb</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Form_lista.vb">
+    <Compile Include="Formularios\Form_Lista.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_Actualizar.Designer.vb">
+      <DependentUpon>Form_Actualizar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_Actualizar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MDI_Principal.Designer.vb">
@@ -124,8 +134,11 @@
     <EmbeddedResource Include="Formularios\Form_baja.resx">
       <DependentUpon>Form_Baja.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Form_lista.resx">
-      <DependentUpon>Form_lista.vb</DependentUpon>
+    <EmbeddedResource Include="Formularios\Form_Lista.resx">
+      <DependentUpon>Form_Lista.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_Actualizar.resx">
+      <DependentUpon>Form_Actualizar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDI_Principal.resx">
       <DependentUpon>MDI_Principal.vb</DependentUpon>

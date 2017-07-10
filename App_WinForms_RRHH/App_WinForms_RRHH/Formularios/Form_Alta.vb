@@ -19,8 +19,9 @@ Public Class Form_Alta
             ' Asignamos valores
             nuevoEmpleado.nombre = txtNombre.Text
             nuevoEmpleado.apellidos = txtApellidos.Text
-            nuevoEmpleado.genero = cmbGenero.SelectedIndex + 1
-            nuevoEmpleado.categoria = domCategoria.SelectedIndex + 1
+            nuevoEmpleado.genero = CType(cmbGenero.SelectedIndex + 1, TipoGenero)
+
+            nuevoEmpleado.categoria = CType(domCategoria.SelectedIndex + 1, TipoCategoria)
             nuevoEmpleado.retribucionFija = numRetribucion.Value
 
             EmpleadosCRUD.Crear(nuevoEmpleado)
@@ -62,5 +63,9 @@ Public Class Form_Alta
         Handles Me.Deactivate
 
         Me.MdiParent.Text = "Aplicación empleados"
+    End Sub
+
+    Private Sub Form_Alta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

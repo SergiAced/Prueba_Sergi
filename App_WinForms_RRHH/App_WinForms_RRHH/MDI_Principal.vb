@@ -1,11 +1,11 @@
 ﻿Imports System.Windows.Forms
+Imports App_WinForms_RRHH
 Imports App_WinForms_RRHH.Modelo
 
 Public Class MDI_Principal
 
     Private frmAlta As Form_Alta
-    Private frmBaja As Form_baja
-    Private frmLista As Form_lista
+    Private frmLista As Form_Lista
 
     Private Sub Abrir_Formulario(Of TForm As {Form, New})(ByRef formulario As TForm)
         If formulario Is Nothing OrElse formulario.IsDisposed() Then
@@ -18,13 +18,16 @@ Public Class MDI_Principal
         End If
         formulario.Activate()
     End Sub
-    Private Sub AltaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AltaToolStripMenuItem.Click
+    Public Sub AbrirAlta()
         Abrir_Formulario(Of Form_Alta)(frmAlta)
     End Sub
-    Private Sub BajaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BajaToolStripMenuItem.Click
-        Abrir_Formulario(Of Form_baja)(frmBaja)
+    Private Sub AltaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AltaToolStripMenuItem.Click
+        AbrirAlta()
     End Sub
 
+    Private Sub ListarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListarToolStripMenuItem.Click
+        Abrir_Formulario(Of Form_Lista)(frmLista)
+    End Sub
     Private Sub tolAlta_Click(sender As Object, e As EventArgs) Handles tolAlta.Click
         AltaToolStripMenuItem_Click(sender, e)
     End Sub
@@ -53,6 +56,11 @@ Public Class MDI_Principal
             EmpleadosToolStripMenuItem.Enabled = True
         End If
     End Sub
+
+    Public Shared Narrowing Operator CType(v As Form) As MDI_Principal
+        Throw New NotImplementedException()
+    End Operator
+
     Private Sub SaveAsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SaveAsToolStripMenuItem.Click
         Dim SaveFileDialog As New SaveFileDialog
         SaveFileDialog.InitialDirectory = EmpleadosFichero.nombreFichero
@@ -137,7 +145,4 @@ Public Class MDI_Principal
         EmpleadosCRUD.Grabar()
     End Sub
 
-    Private Sub ListarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListarToolStripMenuItem.Click
-        Abrir_Formulario(Of Form_Alta)(frmLista)
-    End Sub
 End Class

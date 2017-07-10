@@ -20,13 +20,13 @@
         End Function
         Function RellenarConRegistro(ByVal textoRegistro As String) As Boolean
 
-            Dim arrayCampos() As String = textoRegistro.Split(",")
+            Dim arrayCampos() As String = textoRegistro.Split(CType(",", Char))
 
             If arrayCampos.Length = 4 Then
                 nombre = arrayCampos(0)
                 apellidos = arrayCampos(1)
-                genero = Integer.Parse(arrayCampos(2))
-                categoria = Integer.Parse(arrayCampos(3))
+                genero = CType(Integer.Parse(arrayCampos(2)), TipoGenero)
+                categoria = CType(Integer.Parse(arrayCampos(3)), TipoCategoria)
                 Console.WriteLine(ToString())
                 Return True
             Else
@@ -37,5 +37,9 @@
         Overrides Function ToString() As String
             Return NombreCompleto() + " " & genero.ToString() & " " & categoria.ToString()
         End Function
+
+        Public Shared Widening Operator CType(v As Empleado) As Empleado
+            Throw New NotImplementedException()
+        End Operator
     End Structure
 End Namespace

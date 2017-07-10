@@ -149,7 +149,7 @@ Partial Class Form_Alta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(435, 274)
+        Me.ClientSize = New System.Drawing.Size(484, 343)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.numRetribucion)
         Me.Controls.Add(Me.btnLimpiar)
